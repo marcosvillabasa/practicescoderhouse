@@ -3,7 +3,7 @@ const Contenedor = require('./classes/Contenedor')
 
 const app = express()
 
-const PORT = 8080
+const PORT = process.env.port || 8080
 
 const c = new Contenedor('./products.txt')
 
