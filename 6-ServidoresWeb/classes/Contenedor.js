@@ -81,16 +81,4 @@ class Contenedor {
   }
 }
 
-const contenedor = new Contenedor('./products.txt')
-contenedor.save({
-  title: 'Escuadra',
-  price: 123.45,
-  thumbnail:
-    'https://cdn3.iconfinder.com/data/icons/education-209/64/ruler-triangle-stationary-school-256.png'
-})
-
-// contenedor.getByID(2).then(p => console.log(p))
-// contenedor.getAll().then(data => console.log(data))
-// contenedor.getByID(2).then(data => console.log(data))
-// contenedor.deleteById(1).then(data => console.log(data))
-// contenedor.deleteAll().then(data => console.log(data))
+module.exports = Contenedor
