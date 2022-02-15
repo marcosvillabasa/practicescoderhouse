@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "title": "Mouse trackball inalámbrico recargable Logitech",
+    "price": 8275,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_723793-MLA32146835018_092019-F.webp"
+  },
+  {
+    "id": 2,
+    "title": "The Game House Silla gamer cuello ergonómico apoyapiés negra y azul con tapizado de cuero sintético",
+    "price": 47000,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_838415-MLA48688363286_122021-F.webp"
+  },
+  {
+    "id": 3,
+    "title": "Monitor gamer Samsung F24T35 led 24 azul y gris oscuro 100V/240V",
+    "price": 29999,
+    "thumbnail": "https://http2.mlstatic.com/D_NQ_NP_2X_973781-MLA48131216539_112021-F.webp"
+  }
+]
