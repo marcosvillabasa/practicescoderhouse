@@ -1,14 +1,16 @@
 const express = require('express')
 const router = express.Router()
-let data = require('../../data/products.json')
+const Product = require('../../classes/Product')
+
+const product = new Product()
 
 router.get('/', (req, res) => {
-  res.json(data)
+  res.json(product.getAll())
 })
 
 router.get('/:id', (req, res) => {
   const { id } = req.params
-  const prod = data.find((product) => product.id === parseInt(id))
+  const prod = product.getByID(id)
   if (prod) {
     res.status(200).json(prod)
   }
@@ -17,18 +19,17 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   const { title, price, thumbnail } = req.body || {}
-  console.log(req.body)
   if (!title || !price || !thumbnail) {
     return res.status(400).json({ ok: false, error: 'Invalid fields' })
   }
 
   const newProduct = {
-    id: data.length + 1,
+    id: product.getLength() + 1,
     title,
     price,
     thumbnail
   }
-  data.push(newProduct)
+  product.addProduct(newProduct)
 
   return res.status(200).json({ ok: true, newProduct })
 })
